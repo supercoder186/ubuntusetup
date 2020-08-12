@@ -47,12 +47,8 @@ echo installing WebStorm
 sudo snap install webstorm --classic
 echo install VS Code
 sudo snap install code --classic
-echo installing Instagram
-sudo snap install istekram
-echo installing Spotify
-sudo snap install spotify
-echo installing Discord
-sudo snap install discord
+echo installing Spotify, Instagram and Discord
+sudo snap install spotify istekram discord
 sudo apt autoremove -y
 echo installing Zoom
 wget "https://zoom.us/client/latest/zoom_amd64.deb" -O zoom.deb
@@ -66,6 +62,7 @@ sudo dpkg -i ./fahcontrol.deb
 wget "https://download.foldingathome.org/releases/public/release/fahclient/debian-stable-64bit/v7.6/fahclient_7.6.13_amd64.deb" -O fahclient.deb
 sudo apt --fix-broken install
 sudo dpkg -i ./fahclient.deb
+sudo apt install ocl-icd-opencl-dev -y
 echo installing GreenWithEnvy
 sudo apt install git meson python3-pip libcairo2-dev libgirepository1.0-dev libglib2.0-dev libdazzle-1.0-dev gir1.2-gtksource-3.0 gir1.2-appindicator3-0.1 python3-gi-cairo appstream-util -y
 git clone --recurse-submodules -j4 https://gitlab.com/leinardi/gwe.git
