@@ -19,6 +19,7 @@ sudo chmod +x /usr/bin/update-monitor-position
 sudo mv update-monitor-position.desktop /usr/share/applications/
 echo installing wifi adapter driver
 sudo apt-get install dkms git -y
+git config --global credential.helper store
 git clone -b v5.6.4.2 https://github.com/aircrack-ng/rtl8812au.git
 cd rtl8812au
 sudo ./dkms-install.sh
@@ -81,3 +82,6 @@ echo installing VirtualBox
 sudo apt install virtualbox -y
 sudo rm *.deb* bg.jpg
 sudo rm -rf rtl8812au gwe
+cd ..
+rm -rf ubuntusetup
+git clone https://github.com/supercoder186/ubuntusetup.git
