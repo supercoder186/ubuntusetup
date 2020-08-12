@@ -14,6 +14,9 @@ echo Setting monitor settings
 sudo apt install monit -y
 sudo mv monitors.xml ~/.config/
 sudo monit reload
+sudo mv update-monitor-position /usr/bin/
+sudo chmod +x /usr/bin/update-monitor-position
+sudo mv update-monitor-position.desktop /usr/share/applications/
 echo installing wifi adapter driver
 sudo apt-get install dkms git -y
 git clone -b v5.6.4.2 https://github.com/aircrack-ng/rtl8812au.git
