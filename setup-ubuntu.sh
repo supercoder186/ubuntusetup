@@ -79,3 +79,5 @@ sudo mv run-gwe.sh ~/
 sudo nano /usr/share/applications/com.leinardi.gwe.desktop
 echo installing VirtualBox
 sudo apt install virtualbox -y
+sudo rm *.deb* bg.jpg
+sudo rm -rf rtl8812au gwe
