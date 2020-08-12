@@ -75,6 +75,7 @@ meson . build --prefix /usr
 ninja -v -C build
 sudo ninja -v -C build install
 cd ..
+sudo mv run-gwe.sh ~/
 sudo nano /usr/share/applications/com.leinardi.gwe.desktop
 echo installing VirtualBox
 sudo apt install virtualbox -y
