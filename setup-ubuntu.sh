@@ -4,12 +4,14 @@ echo Updating ubuntu
 sudo apt-get update -y
 sudo apt-get upgrade -y
 echo Installing gnome tweaks
-sudo apt-get install gnome-tweaks -y
+sudo apt-get install gnome-tweaks git dkms build-essential -y
 echo Disabling mouse accelaration
 sudo apt install dconf-editor -y
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
 xinput --set-prop 10 "Coordinate Transformation Matrix" 1 0 0 0 1 0 0 0 1
 gsettings set org.gnome.desktop.peripherals.mouse speed -0.55
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
 echo Setting monitor settings
 sudo apt install monit -y
 sudo mv monitors.xml ~/.config/
@@ -17,19 +19,14 @@ sudo monit reload
 sudo mv update-monitor-position /usr/bin/
 sudo chmod +x /usr/bin/update-monitor-position
 sudo mv update-monitor-position.desktop /usr/share/applications/
-echo installing wifi adapter driver
-sudo apt-get install dkms git -y
+git config --global user.email "aadit.kolar@gmail.com"
+git config --global user.name "Aadit Kolar"
 git config --global credential.helper store
-git clone -b v5.6.4.2 https://github.com/aircrack-ng/rtl8812au.git
-cd rtl8812au
-sudo ./dkms-install.sh
-cd ..
 sudo apt-get install net-tools -y
-echo connect to the desired wi-fi network
-read -p "Press enter to continue"
 echo setting wallpaper background
-wget "https://linustechtips.com/main/uploads/monthly_2019_10/205370641_LTT_RGB_4K(2).jpg.9c843315246c953cb86f97595478d54f.jpg" -O bg.jpg
-gsettings set org.gnome.desktop.background picture-uri file:///home/aadit/bg.jpg
+wget "https://pbs.twimg.com/media/Ec_L8ARU0AApmri?format=png&name=large" -O bg.png
+mv ./bg.png ~/bg.png
+gsettings set org.gnome.desktop.background picture-uri file:///home/aadit/bg.png
 echo installing chrome
 wget "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb" -O chrome.deb
 sudo apt install ./chrome.deb
