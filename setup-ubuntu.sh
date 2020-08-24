@@ -34,6 +34,8 @@ rm chrome.deb
 echo removing firefox
 sudo apt remove firefox -y
 sudo apt-get purge thunderbird* -y
+echo installing Steam
+sudo apt install steam -y
 echo installing lightworks
 wget "https://cdn.lwks.com/releases/lightworks-2020.1-r122068-amd64.deb" -O lightworks.deb
 sudo apt install ./lightworks.deb -y
