@@ -9,7 +9,7 @@ echo Disabling mouse accelaration
 sudo apt install dconf-editor -y
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
 xinput --set-prop 10 "Coordinate Transformation Matrix" 1 0 0 0 1 0 0 0 1
-gsettings set org.gnome.desktop.peripherals.mouse speed -0.65
+gsettings set org.gnome.desktop.peripherals.mouse speed -0.75
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
 echo Setting monitor settings
