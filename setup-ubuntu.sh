@@ -9,7 +9,7 @@ echo Disabling mouse accelaration
 sudo apt install dconf-editor -y
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
 xinput --set-prop 10 "Coordinate Transformation Matrix" 1 0 0 0 1 0 0 0 1
-gsettings set org.gnome.desktop.peripherals.mouse speed -0.55
+gsettings set org.gnome.desktop.peripherals.mouse speed -0.65
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
 echo Setting monitor settings
@@ -46,12 +46,9 @@ echo installing WebStorm
 sudo snap install webstorm --classic
 echo install VS Code
 sudo snap install code --classic
-echo installing Spotify, Instagram and Discord
-sudo snap install spotify istekram discord
+echo installing Spotify, Instagram, Discord, Zoom
+sudo snap install spotify istekram discord zoom-client
 sudo apt autoremove -y
-echo installing Zoom
-wget "https://zoom.us/client/latest/zoom_amd64.deb" -O zoom.deb
-sudo apt install ./zoom.deb -y
 echo installing folding@home
 sudo apt install python-gobject-2
 wget http://archive.ubuntu.com/ubuntu/pool/universe/p/pygtk/python-gtk2_2.24.0-6_amd64.deb
@@ -61,7 +58,7 @@ sudo dpkg -i ./fahcontrol.deb
 wget "https://download.foldingathome.org/releases/public/release/fahclient/debian-stable-64bit/v7.6/fahclient_7.6.13_amd64.deb" -O fahclient.deb
 sudo apt --fix-broken install
 sudo dpkg -i ./fahclient.deb
-sudo apt install ocl-icd-opencl-dev -y
+sudo apt install ocl-icd-opencl-dev cmake cmake-gui -y
 echo installing GreenWithEnvy
 sudo apt install git meson python3-pip libcairo2-dev libgirepository1.0-dev libglib2.0-dev libdazzle-1.0-dev gir1.2-gtksource-3.0 gir1.2-appindicator3-0.1 python3-gi-cairo appstream-util -y
 git clone --recurse-submodules -j4 https://gitlab.com/leinardi/gwe.git
