@@ -28,8 +28,8 @@ gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
 gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
 gsettings set org.gnome.shell.extensions.dash-to-dock show-delay 0
 gsettings set org.gnome.shell.extensions.dash-to-dock intellihide-mode 'ALL_WINDOWS'
-gsettings set org.gnome.shell.extensions.dash-to-dock require-pressure-to-show true
-gsettings set org.gnome.shell.extensions.dash-to-dock pressure-threshold 40
+gsettings set org.gnome.shell.extensions.dash-to-dock require-pressure-to-show false
+gsettings set org.gnome.shell.extensions.dash-to-dock animation-time 0.25
 echo Setting monitor settings
 sudo apt install monit -y
 sudo mv monitors.xml ~/.config/
