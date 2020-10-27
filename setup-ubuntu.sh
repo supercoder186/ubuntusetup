@@ -18,8 +18,17 @@ sudo apt install dconf-editor -y
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
 xinput --set-prop 10 "Coordinate Transformation Matrix" 1 0 0 0 1 0 0 0 1
 gsettings set org.gnome.desktop.peripherals.mouse speed -0.55
+echo Installing Dash to Dock
+git clone https://github.com/micheleg/dash-to-dock.git
+cd dash-to-dock/
+make
+make install
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
+gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
+gsettings set org.gnome.shell.extensions.dash-to-dock show-delay 0
+gsettings set org.gnome.shell.extensions.dash-to-dock intellihide-mode 'ALL_WINDOWS'
+gsettings set org.gnome.shell.extensions.dash-to-dock require-pressure-to-show false
 echo Setting monitor settings
 sudo apt install monit -y
 sudo mv monitors.xml ~/.config/
