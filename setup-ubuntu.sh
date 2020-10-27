@@ -3,13 +3,21 @@ timedatectl set-local-rtc 1
 echo Updating ubuntu
 sudo apt-get update -y
 sudo apt-get upgrade -y
+echo Installing restricted media codecs
+sudo apt install ubuntu-restricted-extras -y
+echo Installing laptop performance enhancers
+sudo apt install preload tlp tlp-rdw -y
+echo installing numix theme
+sudo add-apt-repository ppa:numix/ppa
+sudo apt-get update
+sudo apt-get install numix-gtk-theme numix-icon-theme-circle
 echo Installing gnome tweaks
 sudo apt-get install gnome-tweaks git dkms build-essential -y
 echo Disabling mouse accelaration
 sudo apt install dconf-editor -y
 gsettings set org.gnome.desktop.peripherals.mouse accel-profile 'flat'
 xinput --set-prop 10 "Coordinate Transformation Matrix" 1 0 0 0 1 0 0 0 1
-gsettings set org.gnome.desktop.peripherals.mouse speed -0.72
+gsettings set org.gnome.desktop.peripherals.mouse speed -0.55
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
 echo Setting monitor settings
