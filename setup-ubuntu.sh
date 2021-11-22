@@ -67,33 +67,7 @@ sudo snap install code --classic
 echo installing Spotify, Instagram, Discord, Zoom
 sudo snap install spotify istekram discord zoom-client
 sudo apt autoremove -y
-echo installing folding@home
-sudo apt install python-gobject-2
-wget http://archive.ubuntu.com/ubuntu/pool/universe/p/pygtk/python-gtk2_2.24.0-6_amd64.deb
-sudo dpkg -i python-gtk2_2.24.0-6_amd64.deb
-wget "https://download.foldingathome.org/releases/public/release/fahcontrol/debian-stable-64bit/v7.6/fahcontrol_7.6.13-1_all.deb" -O fahcontrol.deb
-sudo dpkg -i ./fahcontrol.deb
-wget "https://download.foldingathome.org/releases/public/release/fahclient/debian-stable-64bit/v7.6/fahclient_7.6.13_amd64.deb" -O fahclient.deb
-sudo apt --fix-broken install
-sudo dpkg -i ./fahclient.deb
-sudo apt install ocl-icd-opencl-dev cmake cmake-gui -y
-echo installing GreenWithEnvy
-sudo apt install git meson python3-pip libcairo2-dev libgirepository1.0-dev libglib2.0-dev libdazzle-1.0-dev gir1.2-gtksource-3.0 gir1.2-appindicator3-0.1 python3-gi-cairo appstream-util -y
-git clone --recurse-submodules -j4 https://gitlab.com/leinardi/gwe.git
-cd gwe
-git checkout release
-pip3 install -r requirements.txt
-meson . build --prefix /usr
-ninja -v -C build
-sudo ninja -v -C build install
-cd ..
-sudo mv run-gwe.sh ~/
-chmod +x ~/run-gwe.sh
-sudo nano /usr/share/applications/com.leinardi.gwe.desktop
-echo installing VirtualBox
-sudo apt install virtualbox -y
 sudo rm *.deb* bg.jpg
-sudo rm -rf rtl8812au gwe
 cd ..
 rm -rf ubuntusetup
 git clone https://github.com/supercoder186/ubuntusetup.git
