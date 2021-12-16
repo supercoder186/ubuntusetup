@@ -23,6 +23,7 @@ git clone https://github.com/micheleg/dash-to-dock.git
 cd dash-to-dock/
 make
 make install
+cd ..
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
 gsettings set org.gnome.shell.extensions.dash-to-dock autohide true
@@ -54,18 +55,14 @@ sudo apt remove firefox -y
 sudo apt-get purge thunderbird* -y
 echo installing Steam
 sudo apt install steam -y
-echo installing lightworks
-wget "https://cdn.lwks.com/releases/lightworks-2020.1-r122068-amd64.deb" -O lightworks.deb
-sudo apt install ./lightworks.deb -y
-rm lightworks.deb
 echo installing PyCharm
 sudo snap install pycharm-professional --classic
 echo installing WebStorm
 sudo snap install webstorm --classic
 echo install VS Code
 sudo snap install code --classic
-echo installing Spotify, Instagram, Discord, Zoom
-sudo snap install spotify istekram discord zoom-client
+echo installing Spotify, Discord, Zoom
+sudo snap install spotify discord zoom-client
 sudo apt autoremove -y
 sudo rm *.deb* bg.jpg
 cd ..
