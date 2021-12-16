@@ -1,5 +1,8 @@
 clear
 timedatectl set-local-rtc 1
+echo fixing screen tearing
+sudo mkdir ~/.config/autostart
+sudo mv ./fix_screen_tearing.desktop ~/.config/autostart/fix_screen_tearing.desktop
 echo Updating ubuntu
 sudo apt-get update -y
 sudo apt-get upgrade -y
