@@ -6,8 +6,6 @@ sudo mv ./fix_screen_tearing.desktop ~/.config/autostart/fix_screen_tearing.desk
 echo Updating ubuntu
 sudo apt-get update -y
 sudo apt-get upgrade -y
-echo Installing restricted media codecs
-sudo apt install ubuntu-restricted-extras -y
 echo Installing laptop performance enhancers
 sudo apt install preload tlp tlp-rdw -y
 echo Installing gnome tweaks
@@ -31,13 +29,11 @@ sudo apt remove firefox -y
 sudo apt-get purge thunderbird* -y
 echo installing Steam
 sudo apt install steam -y
-echo installing PyCharm
-sudo snap install pycharm-professional --classic
-echo installing WebStorm
-sudo snap install webstorm --classic
 echo install VS Code
 sudo snap install code --classic
 echo installing Spotify, Discord, Zoom
 sudo snap install spotify discord zoom-client
+echo Installing restricted media codecs
+sudo apt install ubuntu-restricted-extras -y
 sudo apt autoremove -y
 sudo rm *.deb* bg.jpg
