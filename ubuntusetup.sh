@@ -26,6 +26,7 @@ sudo apt install ./opera.deb -y
 rm opera.deb
 echo removing firefox
 sudo apt remove firefox -y
+sudo snap remove firefox
 sudo apt-get purge thunderbird* -y
 echo installing Steam
 sudo apt install steam -y
@@ -37,3 +38,7 @@ echo Installing restricted media codecs
 sudo apt install ubuntu-restricted-extras -y
 sudo apt autoremove -y
 sudo rm *.deb* bg.jpg
+sudo add-apt-repository ppa:kubuntu-ppa/backports -y
+sudo apt-get update -y
+sudo apt install kde-plasma-desktop -y
+
