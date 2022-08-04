@@ -8,6 +8,7 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 echo Installing laptop performance enhancers
 sudo apt install preload tlp tlp-rdw -y
+sudo systemctl enable tlp.service
 echo Installing gnome tweaks
 sudo apt-get install gnome-tweaks git dkms build-essential -y
 echo Disabling mouse accelaration
@@ -41,4 +42,3 @@ sudo rm *.deb* bg.jpg
 sudo add-apt-repository ppa:kubuntu-ppa/backports -y
 sudo apt-get update -y
 sudo apt install kde-plasma-desktop -y
-
