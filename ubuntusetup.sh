@@ -38,7 +38,3 @@ sudo snap install spotify discord zoom-client
 echo Installing restricted media codecs
 sudo apt install ubuntu-restricted-extras -y
 sudo apt autoremove -y
-sudo rm *.deb* bg.jpg
-sudo add-apt-repository ppa:kubuntu-ppa/backports -y
-sudo apt-get update -y
-sudo apt install kde-plasma-desktop -y
