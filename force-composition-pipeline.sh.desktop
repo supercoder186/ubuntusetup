@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/home/aadit/bin/force-composition-pipeline.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_US]=Fix Screen Tearing
+Name=Fix Screen Tearing
+Comment[en_US]=Just Fix It!
+Comment=Just Fix It!

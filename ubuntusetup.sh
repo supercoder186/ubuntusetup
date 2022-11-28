@@ -1,11 +1,14 @@
 clear
 timedatectl set-local-rtc 1
-echo fixing screen tearing
-sudo mkdir ~/.config/autostart
-sudo mv ./fix_screen_tearing.desktop ~/.config/autostart/fix_screen_tearing.desktop
 echo Updating ubuntu
 sudo apt-get update -y
 sudo apt-get upgrade -y
+echo fixing screen tearing
+mkdir ~/bin
+sudo mv force-composition-pipeline.sh ~/bin/force-composition-pipeline.sh
+sudo chmod +x ~/bin/force-composition-pipeline.sh
+mkdir ~/.config/autostart
+sudo mv force-composition-pipeline.desktop ~/.config/autostart/force-composition-pipeline.desktop
 echo Installing laptop performance enhancers
 sudo apt install preload tlp tlp-rdw -y
 sudo systemctl enable tlp.service
