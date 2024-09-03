@@ -51,3 +51,9 @@ sudo snap install spotify discord zoom-client
 echo Installing restricted media codecs
 sudo apt install ubuntu-restricted-extras -y
 sudo apt autoremove -y
+
+echo Syncing Bluetooth keys
+git clone https://github.com/KeyofBlueS/bt-keys-sync.git
+cd bt-keys-sync/
+chmod +x bt-keys-sync.sh
+sudo ./bt-keys-sync.sh --windows-keys
